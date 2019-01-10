@@ -16,6 +16,6 @@ class Despesa(models.Model):
     quitado = models.BooleanField()
     campo_temp = datetime.timedelta(days=2)
 
-
-    def __srt__(self):
-        return self.tipo_despesa
+    def __str__(self):
+        return self.descriçao
+    

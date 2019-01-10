@@ -54,6 +54,8 @@ class Aluguel(models.Model):
     tema = models.ForeignKey(Tema, on_delete=models.CASCADE)
     endereco = models.OneToOneField(Endereco, on_delete=models.CASCADE, primary_key=True)
 
-
+    def __str__(self):
+        return self.tema
+    
     class Meta:
         verbose_name_plural = 'Alugeis'

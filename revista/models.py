@@ -27,3 +27,6 @@ class Amigo(models.Model):
     telefone = models.CharField(max_length=15)
     grupo_amigo = models.CharField(max_length=100,choices=grupo)
     emprestimo = models.ForeignKey(emprestimo,on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.nome
